@@ -55,7 +55,7 @@ const FeaturedPosts = () => {
   )
 
   const customRightArrow = (
-    <div className="arrow-btn absolute right-0 w-full cursor-pointer rounded-full bg-pink-600 py-3 text-center">
+    <div className="arrow-btn absolute right-0 cursor-pointer rounded-full bg-pink-600 py-3 text-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6 text-white"
@@ -73,13 +73,20 @@ const FeaturedPosts = () => {
     </div>
   )
   return (
-    <div className="mb-5">
+    <div className="mb-5 w-full">
       <Carousel
         infinite
-        customLeftArrow={customLeftArrow}
-        customRightArrow={customRightArrow}
+        // customLeftArrow={customLeftArrow}
+        // customRightArrow={customRightArrow}
         responsive={responsive}
-        itemClass="px-4"
+        itemClass="px-3"
+        removeArrowOnDeviceType={[
+          'tablet',
+          'mobile',
+          'desktop',
+          'superLargeDesktop',
+        ]}
+        showDots={true}
       >
         {dataLoaded &&
           featuredPosts.map((post, index) => (

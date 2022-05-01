@@ -13,14 +13,14 @@ const Menu = () => {
 
   return (
     <>
-      <Link href="/">
-        <span className="cursor-pointer py-1.5 font-semibold text-white hover:text-yellow-600 lg:py-0">
+      {/* <Link href="/">
+        <span className="cursor-pointer py-1.5 font-semibold text-black hover:text-red-600 lg:py-0">
           Home
         </span>
-      </Link>
+      </Link> */}
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`}>
-          <span className="ml-4 cursor-pointer py-1.5 font-semibold text-white hover:text-yellow-600 lg:py-0">
+          <span className="mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold text-black text-opacity-75 hover:text-opacity-100 lg:ml-5 lg:border-b-0 lg:py-0">
             {category.name}
           </span>
         </Link>
@@ -39,12 +39,12 @@ const Header = () => {
   // }, [])
 
   return (
-    <div className="relative w-full bg-black">
-      <div className="gp-container flex items-center justify-between py-5">
+    <div className="relative w-full rounded-b-lg bg-white shadow-md">
+      <div className="gp-container flex items-center justify-between py-6">
         <div>
           <Link href="/">
-            <span className="cursor-pointer text-2xl font-bold text-yellow-600">
-              SigmaCMS
+            <span className="cursor-pointer text-2xl font-black text-black">
+              Sigma-Blog
             </span>
           </Link>
         </div>
@@ -54,25 +54,25 @@ const Header = () => {
         <div className="lg:hidden">
           {toggleMenu ? (
             <RiCloseLine
-              className="text-yellow-600"
+              className="text-black"
               size="30"
               onClick={() => setToggleMenu(false)}
             />
           ) : (
             <RiMenu3Line
-              className="text-yellow-600"
+              className="text-black"
               size="27"
               onClick={() => setToggleMenu(true)}
             />
           )}
           {(toggleMenu && (
-            <div className="scale-up-center absolute top-[86px] right-4 min-w-[210px]  rounded-lg  bg-black bg-opacity-80 p-0 text-right shadow-lg md:right-10">
+            <div className="scale-up-center absolute top-[93px] right-4 min-w-[210px]  rounded-lg  bg-white p-0 text-right shadow-lg md:right-10">
               <div className="flex flex-col rounded-lg py-5 px-6 shadow-inner">
                 <Menu />
               </div>
             </div>
           )) || (
-            <div className="scale-down-center absolute top-[86px] right-4  min-w-[210px]  rounded-lg bg-black bg-opacity-80 p-0 text-right shadow-lg">
+            <div className="scale-down-center absolute top-[86px] right-4  min-w-[210px]  rounded-lg bg-white p-0 text-right shadow-lg md:right-10">
               <div className="flex flex-col rounded-lg py-5 px-6 shadow-inner">
                 <Menu />
               </div>
