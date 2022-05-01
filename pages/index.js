@@ -5,7 +5,7 @@ import { getPosts } from '../services'
 
 export default function Home({ posts }) {
   return (
-    <div className="gp-container z-0 mb-8 py-5">
+    <div className="gp-container z-0 mb-0 pt-12 pb-0 lg:mb-8 lg:pb-8">
       <Head>
         <title>CMS Blog</title>
         <link rel="icon" href="/favicon.ico" />
@@ -20,7 +20,7 @@ export default function Home({ posts }) {
           </div>
         </div>
         <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky lg:top-[90px]">
+          <div className="relative lg:sticky lg:top-[105px]">
             <PostWidget />
             <Categories />
           </div>

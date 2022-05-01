@@ -48,8 +48,8 @@ const CommentsForm = ({ slug }) => {
   }
 
   return (
-    <div className="mb-8 rounded-lg bg-white p-8 pb-12 shadow-lg">
-      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
+    <div className="mb-8 rounded-lg bg-white p-5 pb-7 md:pb-12 shadow-lg md:p-8">
+      <h3 className="gp-text-gradient mb-5 md:mb-8 border-b pb-3 md:pb-4 text-xl font-semibold">
         Leave a Comment
       </h3>
       <div className="mb-4 grid grid-cols-1 gap-4">
@@ -93,7 +93,7 @@ const CommentsForm = ({ slug }) => {
         </div>
       </div>
       {error && (
-        <p className="w-full rounded-full bg-red-200 px-3 py-1 text-xs text-red-500">
+        <p className="mt-5 w-full rounded-full bg-red-200 px-3 py-1 text-xs text-red-500">
           All fields are required!
         </p>
       )}
@@ -101,7 +101,7 @@ const CommentsForm = ({ slug }) => {
         <button
           type="button"
           onClick={handleCommentSubmission}
-          className="ease mr-3 inline-block rounded-full bg-black py-2 px-4 text-white transition duration-500 hover:bg-yellow-600 hover:text-black"
+          className="gp-btn mr-3  inline-block"
         >
           Post Comment
         </button>

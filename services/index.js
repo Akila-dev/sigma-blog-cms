@@ -89,7 +89,7 @@ export const getSimilarPosts = async (categories, slug) => {
 export const getCategories = async () => {
   const query = gql`
     query GetCategories {
-      categories {
+      categories(last: 5) {
         name
         slug
       }

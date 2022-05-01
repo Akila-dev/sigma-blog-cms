@@ -20,7 +20,7 @@ const Menu = () => {
       </Link> */}
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`}>
-          <span className="mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold text-black text-opacity-75 hover:text-opacity-100 lg:ml-5 lg:border-b-0 lg:py-0">
+          <span className="mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold text-black hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0">
             {category.name}
           </span>
         </Link>
@@ -43,7 +43,7 @@ const Header = () => {
       <div className="gp-container flex items-center justify-between py-6">
         <div>
           <Link href="/">
-            <span className="cursor-pointer text-2xl font-black text-black">
+            <span className="gp-text-gradient cursor-pointer text-2xl font-black">
               Sigma-Blog
             </span>
           </Link>
@@ -54,13 +54,13 @@ const Header = () => {
         <div className="lg:hidden">
           {toggleMenu ? (
             <RiCloseLine
-              className="text-black"
+              className="text-indigo-900"
               size="30"
               onClick={() => setToggleMenu(false)}
             />
           ) : (
             <RiMenu3Line
-              className="text-black"
+              className="text-indigo-900"
               size="27"
               onClick={() => setToggleMenu(true)}
             />

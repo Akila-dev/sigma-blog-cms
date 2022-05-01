@@ -71,12 +71,12 @@ const PostDetail = ({ post }) => {
   }
 
   return (
-    <div className="mb-8 rounded-lg bg-white pb-12 shadow-lg lg:p-8">
-      <div className="relative mb-7 overflow-hidden shadow-md">
+    <div className="mb-8 rounded-lg bg-white pb-2 shadow-lg lg:p-8">
+      <div className="relative mb-7 min-h-[240px] w-full overflow-hidden rounded-t-lg shadow-md lg:rounded-lg">
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className="h-full w-full rounded-lg object-top"
+          className="min-h-[240px] w-full rounded-t-lg object-cover lg:rounded-lg"
         />
       </div>
       <div className="contents-center mb-6 flex w-full items-center justify-center px-4 lg:px-0">
@@ -94,7 +94,7 @@ const PostDetail = ({ post }) => {
         <div className="flex items-center font-medium text-gray-700">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="mr-2 inline h-6 w-6 text-yellow-600"
+            className="mr-2 inline h-6 w-6 text-indigo-900"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -112,7 +112,7 @@ const PostDetail = ({ post }) => {
         </div>
       </div>
       <div className="px-4 text-justify first:text-center lg:px-0">
-        <h1 className="mb-8 text-center text-xl font-bold uppercase lg:text-2xl">
+        <h1 className="gp-text-gradient mb-8 text-center text-xl font-bold uppercase lg:text-2xl">
           {post.title}
         </h1>
         {console.log(post.content.raw)}

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 
 import { getCategories, getCategoryPost } from '../../services'
 import { PostCard, Categories, Loader, PostWidget } from '../../components'
+import { FeaturedPosts } from '../../sections'
 
 const CategoryPosts = ({ posts }) => {
   const router = useRouter()
@@ -12,7 +13,7 @@ const CategoryPosts = ({ posts }) => {
   }
 
   return (
-    <div className="gp-container z-0 mb-8 py-5">
+    <div className="gp-container z-0 mb-8 py-8">
       {/* <FeaturedPosts /> */}
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
@@ -24,11 +25,14 @@ const CategoryPosts = ({ posts }) => {
           </div>
         </div>
         <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky lg:top-[90px]">
+          <div className="relative lg:sticky lg:top-[105px]">
             <PostWidget categories={undefined} slug={undefined} />
             <Categories />
           </div>
         </div>
+      </div>
+      <div className="pt-8">
+        <FeaturedPosts />
       </div>
     </div>
   )

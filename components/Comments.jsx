@@ -15,16 +15,16 @@ const Comments = ({ slug }) => {
   return (
     <>
       {comment.length > 0 && (
-        <div className="mb-8 rounded-lg bg-white p-8 pb-12 shadow-lg">
-          <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
+        <div className="rounded-lg bg-white p-5 shadow-lg md:p-8 md:pb-12">
+          <h3 className="gp-text-gradient mb-5 border-b pb-3 text-xl font-semibold md:mb-8 md:pb-4">
             {(comments.length > 1 && comments.length + 'COMMENTS') || 'COMMENT'}
           </h3>
           {comments.map((comment) => (
             <div
-              className="mb-4 border-b border-gray-100 pb-4"
+              className="mb-3 border-b border-gray-100 pb-3 md:mb-4 md:pb-4"
               key={comment.createdAt}
             >
-              <p className="mb-4">
+              <p className="mb-3 md:mb-4">
                 <span className="font-semibold">{comment.name}</span> on{' '}
                 {moment(comment.createdAt).format('MMM DD, YYYY')}
               </p>
