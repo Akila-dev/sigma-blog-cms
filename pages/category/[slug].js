@@ -13,7 +13,7 @@ const CategoryPosts = ({ posts }) => {
   }
 
   return (
-    <div className="gp-container z-0 mb-8 py-8">
+    <div className="gp-container z-0 mb-0 py-8 pb-6 md:mb-8 md:pb-8">
       {/* <FeaturedPosts /> */}
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">

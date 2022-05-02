@@ -5,7 +5,7 @@ import { getPosts } from '../services'
 
 export default function Home({ posts }) {
   return (
-    <div className="gp-container z-0 mb-0 pt-12 pb-0 lg:mb-8 lg:pb-8">
+    <div className="gp-container z-0 mb-5 pt-12 pb-8 lg:mb-8 lg:pb-8">
       <Head>
         <title>Sigma Blog</title>
         <link rel="icon" href="/favicon.ico" />

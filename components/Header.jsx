@@ -31,7 +31,7 @@ const Menu = () => {
         <Link key={category.slug} href={`/category/${category.slug}`}>
           <span
             className={
-              router.pathname == '/category/tech-news'
+              router.pathname == '../category/tech-news'
                 ? 'gp-text-gradient mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold  hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0'
                 : 'mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold text-black  hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0'
             }
