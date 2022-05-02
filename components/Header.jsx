@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 
 import Link from 'next/link'
@@ -11,16 +12,30 @@ const Menu = () => {
     getCategories().then((newCategories) => setCategories(newCategories))
   }, [])
 
+  const router = useRouter()
+
   return (
     <>
-      {/* <Link href="/">
-        <span className="cursor-pointer py-1.5 font-semibold text-black hover:text-red-600 lg:py-0">
+      <Link href="/">
+        <span
+          className={
+            router.pathname == '/'
+              ? 'gp-text-gradient mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold  hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0'
+              : 'mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold text-black  hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0'
+          }
+        >
           Home
         </span>
-      </Link> */}
+      </Link>
       {categories.map((category) => (
         <Link key={category.slug} href={`/category/${category.slug}`}>
-          <span className="mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold text-black hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0">
+          <span
+            className={
+              router.pathname == '/category/tech-news'
+                ? 'gp-text-gradient mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold  hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0'
+                : 'mb-1 cursor-pointer border-b border-gray-200 py-2 font-semibold text-black  hover:text-indigo-900 lg:ml-5 lg:border-b-0 lg:py-0'
+            }
+          >
             {category.name}
           </span>
         </Link>

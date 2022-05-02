@@ -7,7 +7,7 @@ export default function Home({ posts }) {
   return (
     <div className="gp-container z-0 mb-0 pt-12 pb-0 lg:mb-8 lg:pb-8">
       <Head>
-        <title>CMS Blog</title>
+        <title>Sigma Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FeaturedPosts />
