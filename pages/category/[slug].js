@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 import { getCategories, getCategoryPost } from '../../services'
 import { PostCard, Categories, Loader, PostWidget } from '../../components'
@@ -14,6 +15,10 @@ const CategoryPosts = ({ posts }) => {
 
   return (
     <div className="gp-container z-0 mb-0 py-8 pb-6 md:mb-8 md:pb-8">
+      <Head>
+        <title>Sigma Blog</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {/* <FeaturedPosts /> */}
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
